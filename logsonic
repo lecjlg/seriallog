@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "logging wind sonic on /dev/ttyS1"
+timestamp=`date --utc +"%Y-%m-%d %H:%M:%S,%Z,"` #date in UTC
+today=${timestamp:0:10}
+x=1
+while [ $x -le 2 ]
+do 
+timestamp=`date --utc +"%Y-%m-%d %H:%M:%S,%Z,"`
+today=${timestamp:0:10}
+echo -n $timestamp >> /data/sonicdata/sonic_${today}.txt
+/home/lecjlg/readserial.py | grep -v "^$" >> /data/sonicdata/sonic_${today}.txt
+sleep 1
+done
