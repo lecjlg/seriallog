@@ -1,8 +1,7 @@
-#! python
+#!/usr/bin/env python
 
 import time
 import serial
-import time
 
 ser = serial.Serial(
    port='/dev/ttyUSB0',
