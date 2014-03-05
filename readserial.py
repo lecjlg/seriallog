@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import time
+from datetime import datetime
 import serial
 
 ser = serial.Serial(
@@ -9,5 +9,5 @@ ser = serial.Serial(
 )
                     
 #print ser.readline() #temp probe returns Carriage return as newline, so this does not work
-print ser.read(size=8) # all its returns are eight characters
+print datetime.utcnow().isoformat(), ser.read(size=8) # all its returns are eight characters
 ser.close
