@@ -8,5 +8,6 @@ ser = serial.Serial(
    baudrate=9600,
 )
                     
-print ser.readline()
+#print ser.readline() #temp probe returns Carriage return as newline, so this does not work
+print ser.read(size=8) # all its returns are eight characters
 ser.close
