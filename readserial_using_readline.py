@@ -12,7 +12,7 @@ ser = serial.Serial(
 #you need to wrap the Serial instance
 #( http://pyserial.sourceforge.net/shortintro.html#readline )
 
-#The Papouch temp probe uses carriage returns (ascii 13 or "\r" in python[1]) so specify
+#The Papouch temp probe uses carriage returns (ascii 13 or "\r" in python[1]) so specified here
 # TextIOWrapper's default "universal newlines" mode also works, but the Serial module's
 # readline does not.
 # http://docs.python.org/2/glossary.html#term-universal-newlines

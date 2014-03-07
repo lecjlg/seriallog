@@ -7,8 +7,10 @@ ser = serial.Serial(
    port='/dev/ttyUSB0',
    baudrate=9600,
 )
-                    
-#print ser.readline() #temp probe returns Carriage return as newline, so this does not work
-print datetime.utcnow().isoformat(), ser.read(size=8) # all its returns are eight characters
+
+#flush input buffer
+
+datastring = ser.read(size=8)
+print datetime.utcnow().isoformat(), datastring
 
 ser.close()

@@ -19,6 +19,6 @@ with open(outfile,'a') as f: #appends to existing file
       #tab-separated
       #print datetime.utcnow().isoformat() + '\t' + datastring + '\n'
       f.write(datetime.utcnow().isoformat() + '\t' + datastring + '\n') # \n is line separator
-      f.flush() #included to force the system to write to disk
+      #f.flush() #included to force the system to write to disk
 
 ser.close()
