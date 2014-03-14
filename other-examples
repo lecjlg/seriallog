@@ -1,0 +1,2 @@
+#miniterm (defaults of 9600 baud, 8N1 are correct)
+miniterm.py /dev/ttyUSB0 
