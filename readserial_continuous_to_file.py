@@ -17,7 +17,6 @@ with open(outfile,'a') as f: #appends to existing file
    while ser.isOpen():
       datastring = sio.readline()
       #tab-separated
-      #print datetime.utcnow().isoformat() + '\t' + datastring + '\n'
       f.write(datetime.utcnow().isoformat() + '\t' + datastring + '\n') # \n is line separator
       f.flush() #included to force the system to write to disk
 
